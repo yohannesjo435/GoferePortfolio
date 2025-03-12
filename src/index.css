@@ -12,13 +12,13 @@
     --secondar-gray: #373737;
     --header-font-size-1: 15px;
     --primary-font: "Inter", cursive;
+    --secondary-font: "Poppins", cursive;
+    /* --ternary-font:  */
 }
 
 body {
-    width: 100vw;
     background-color: var(--primary-backgroud);
     color: var(--primary-color);
-    height: 100vh;
 }
 
 

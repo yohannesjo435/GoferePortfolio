@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../Button/Button'
+import "../Button/Button.css"
 
 export default function Hero() {
   return (
@@ -11,9 +13,11 @@ export default function Hero() {
      <h5>
       a professional website design company <br /> 
       in Ethiopia that can help you create an 
-                <br />attractive.
+                <br />attractive websites.
      </h5>
-     <button className='hero-contact-us-btn'>Contact us</button>
+     <Button 
+      Children="Contact us" 
+    />
   </section>
   )
 }

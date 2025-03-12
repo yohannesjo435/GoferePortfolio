@@ -1,0 +1,9 @@
+.btn-component {
+    font-family: var(--primary-font);
+    padding: 10px  15px;
+    background-color: #ffffff;
+    color: var(--secondar-gray);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}

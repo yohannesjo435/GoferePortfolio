@@ -1,0 +1,61 @@
+
+.bento-grid-wrapper {
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px ;
+    grid-template-rows: 311px 311px 311px; */
+    grid-auto-columns: auto;
+    grid-auto-rows: 311px 311px 311px;
+    grid-template-areas: 
+    "item1 item1 item2"
+    "item3 item4 item2"
+    "item5 item6 item6"
+    ;
+    gap: 30px;
+    /* outline: auto; */
+    /* overflow-x: hidden;remove this shit */
+}
+.bento-grid-wrapper div:first-child {
+    grid-area: item1;
+}
+.bento-grid-wrapper div:nth-child(2){
+    grid-area: item2;
+}
+.bento-grid-wrapper div:nth-child(3) {
+    grid-area: item3;
+}
+.bento-grid-wrapper div:nth-child(4){
+    grid-area: item4;
+}
+.bento-grid-wrapper div:nth-child(5) {
+    grid-area: item5;
+}
+.bento-grid-wrapper div:nth-child(6) {
+    grid-area: item6;
+}
+
+
+.bento-h1 {
+    font-size: 80px;
+    font-family: var(--secondary-font );
+    line-height: 70px;
+}
+
+@media (max-width: 805px) {
+    .bento-h1 {
+        font-size: 40px;
+        font-family: var(--secondary-font );
+        line-height: 45px;
+    }
+    .bento-grid-wrapper {
+        grid-template-areas: 
+        "item1 item1"
+        "item2 item3"
+        "item2 item4"
+        "item6 item6";
+        gap: 15px;
+        grid-auto-rows: auto; /* Allow rows to adjust based on content */
+    }
+    .bento-grid-wrapper div:nth-child(5) {
+        display: none;
+    }
+}

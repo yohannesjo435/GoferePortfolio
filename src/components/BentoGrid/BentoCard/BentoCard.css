@@ -1,0 +1,20 @@
+.h1-bento-container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.bento-card {
+    /* outline: auto; */
+    border-radius: 10px;
+}
+.bento-card img{
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+ @media (max-width: 805px) {
+    .h1-bento-container {
+        gap: 34px;
+    }
+ }

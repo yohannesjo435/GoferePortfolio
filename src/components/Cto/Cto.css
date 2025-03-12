@@ -1,0 +1,24 @@
+.cto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 50px;
+}
+.cto h1{
+    font-family: var(--secondary-font);
+    font-size: 89.95px;
+    line-height: 103.3px;
+}
+
+@media (max-width: 900px) {
+    .cto {
+        row-gap: 50px;
+    }
+    .cto h1{
+        font-family: var(--secondary-font);
+        font-size: 64px;
+        line-height: 73px;
+        text-wrap: nowrap;
+    }
+}

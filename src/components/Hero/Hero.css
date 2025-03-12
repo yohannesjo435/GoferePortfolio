@@ -1,26 +1,29 @@
 .hero-section{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    align-items: center;
+    /* gap: 24px; */
+    margin: auto;
+    row-gap: 24px;
+    overflow-x: hiiden;
 }
 
 .main-content-h1{
-    font-family: var(--header-font-size-1);
+    font-family: var(--primary-font);
     text-align: center;
     font-size: 64px;
     margin-top: 64px ;
 }
 .hero-section h5 {
-    font-family: var(--header-font-size-1);
+    font-family: var(--primary-font);
     text-align: center;
     color: var(--gray);
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
 }
-.hero-contact-us-btn {
-    
-}
+
 @media (max-width: 900px){
     .hero-section{
         gap: 24px;
@@ -32,7 +35,7 @@
         margin-top: 64px ;
     }
     .hero-section h5 {
-        font-size: var(--header-font-size-1);
+        font-family: var(--primary-font);
         line-height: 26px;
         font-weight: 400;
     }

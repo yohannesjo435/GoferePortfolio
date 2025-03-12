@@ -3,15 +3,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: 64px;
     padding: 0 5%;
     position: relative;
+    /* background-color :aqua; */
 }
 header .logo-wrapper .logo {
     font-size: var(--header-font-size-1);
     color: var(--secondary-backgroud);
     font-family: var(--primary-font);
+    font-weight: bold;
 }
 
 header ul {
@@ -39,15 +42,7 @@ header ul li {
     border-radius: 10px;
     background-color: #ffffff;
 }
-header .talk-to-an-expert {
-    font-family: var(--primary-font);
-    padding: 10px  15px;
-    background-color: #ffffff;
-    color: var(--secondar-gray);
-    border: none;
-    outline: none;
-    border-radius: 10px;
-}
+
 
 @media (max-width: 900px) {
     header {

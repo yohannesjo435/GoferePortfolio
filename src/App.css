@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    margin: 0 auto;
+}
+.trusted-by-section {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    /* outline: auto; */
+    margin: 100px auto;
+}
+.cto-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    width: 100%;
+    height: 100vh;
+    background: url(src/assets/Royal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 192px 0;
+} 
+.bento-section {
+    height: 200vh;
+    padding: 5%;
+    gap: 64px;
+    margin: 192px 0;
+
+}
+
+@media (max-width: 900px) {
+    .cto-section {
+        padding: 0 5%;
+        height: 80vh;
+    }   
+}

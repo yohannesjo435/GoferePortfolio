@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from '../Button/Button'
+import "../Button/Button.css"
+
 
 export default function Header({toggleNavigation,navigationOpen, windowSize}) {
   return (
@@ -19,9 +22,12 @@ export default function Header({toggleNavigation,navigationOpen, windowSize}) {
         <li>Contact us</li>
       </ul>
 
-      <button className='talk-to-an-expert'>
-        Talk to an expert
-      </button>
+      <div className="talk-to-an-expert"> 
+        <Button 
+          Children="Talk to an expert" 
+        />
+      </div>
+
       
       <div 
         onClick={toggleNavigation} 
