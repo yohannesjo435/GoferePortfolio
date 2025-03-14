@@ -9,6 +9,7 @@
     font-family: var(--secondary-font);
     font-size: 89.95px;
     line-height: 103.3px;
+    user-select: none;
 }
 
 @media (max-width: 900px) {

@@ -1,0 +1,87 @@
+.service-wrapper {
+    display: grid;
+    justify-items: center;
+    height: max-content;
+    width: 90%;
+    margin: 30px auto; /*Change this   */
+    gap: 80px;
+}
+.service-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-bottom: 34px;
+}
+.service-wrapper h1 {
+    font-family: var(--tenary-fonts);
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+.service-wrapper h3 {
+    font-family: var(--tenary-fonts);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #ECECEC;
+    
+}
+
+.service-bento {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 311px 311px;
+    grid-template-areas: 
+    "serviceItem1 serviceItem2"
+    "serviceItem3 serviceItem3"
+    "serviceItem4 serviceItem5";    
+    gap: 24px;
+}
+
+.service-bento div:first-child {
+    grid-area: serviceItem1;
+}
+.service-bento div:nth-child(2){
+    grid-area: serviceItem2;
+}
+.service-bento div:nth-child(3){
+    grid-area: serviceItem3;
+}
+.service-bento div:nth-child(4){
+    grid-area: serviceItem4;
+}
+.service-bento div:nth-child(5){
+    grid-area: serviceItem5;
+}
+@media (max-width: 900px) {
+    .service-wrapper {
+        width: 90%;
+        margin: 0px auto; /* change this  */
+    }
+    .service-titles {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        margin-bottom: 34px;
+    }
+    .service-wrapper h1 {
+        font-size: 28px;
+    }
+    .service-wrapper h3 {
+        font-size: 14px;
+    }
+    
+    .service-bento {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "serviceItem1" 
+        "serviceItem2"
+        "serviceItem3" 
+        "serviceItem3"
+        "serviceItem4" 
+         "serviceItem5";    
+        gap: 18px;
+    }
+       
+}

@@ -11,7 +11,12 @@ import Cto from './components/Cto/Cto'
 import "./components/Cto/Cto.css"
 import BentoGrid from "./components/BentoGrid/BentoGrid"
 import "./components/BentoGrid/BentoGrid.css"
-
+import BentoGridServices from './components/BentoGridServices/BentoGridServices'
+import "./components/BentoGridServices/BentoGridServices.css"
+import Cto2 from "./components/Cto2/Cto2"
+import "./components/Cto2/Cto2.css"
+import Footer from './components/Footer/Footer'
+import './components/Footer/Footer.css'
 
 export default function App() {
   const [navigationOpen, setNavigationOpen] = useState(true)
@@ -66,6 +71,16 @@ export default function App() {
         <BentoGrid></BentoGrid>
       </section>
       
+      <section className='service-section'>
+        <BentoGridServices></BentoGridServices>
+      </section>
+
+      <section className='cto2-section'>
+        <Cto2></Cto2>
+      </section>
+
+      <Footer></Footer>
+
     </>
     
   )

@@ -29,8 +29,20 @@ main {
     background-repeat: no-repeat;
     margin: 192px 0;
 } 
+.cto2-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    width: 100%;
+    height: 100vh;
+    background: url(src/assets/Royal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 192px 0 0 0;
+} 
 .bento-section {
-    height: 200vh;
+    /* height: 200vh; check this*/ 
     padding: 5%;
     gap: 64px;
     margin: 192px 0;
