@@ -18,6 +18,7 @@ import "./components/Cto2/Cto2.css"
 import Footer from './components/Footer/Footer'
 import './components/Footer/Footer.css'
 
+
 export default function App() {
   const [navigationOpen, setNavigationOpen] = useState(true)
   function handleNavigationToggle() {
@@ -79,7 +80,8 @@ export default function App() {
         <Cto2></Cto2>
       </section>
 
-      <Footer></Footer>
+      <Footer>
+      </Footer>
 
     </>
     

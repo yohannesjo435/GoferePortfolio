@@ -1,0 +1,69 @@
+.feedback-wrapper {
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 24px;
+    width: 392px;
+    height: 550px;
+    background-color: #17181C;
+    border-radius: 16px;
+    color: var(--primary-color);
+}
+.feedback-wrapper h6 {
+    color: var(--feedback-color);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4%;
+}
+.feedback-wrapper h1 {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 28px;
+}
+.feedback-wrapper h1 span {
+    color: var(--primary-color);
+}
+.feedback-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.feedback-wrapper form .input-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 56px; */
+    padding: 0 12px 0px 12px;
+    /* gap: 4px; */
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    position: relative;
+}
+.feedback-wrapper form .input-wrapper label {
+    font-family: var(--tenary-fonts);
+    padding: 5px 0 0px 0;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    /* position: absolute; */
+    /* top: 10%; */
+}
+.feedback-wrapper form input{
+    padding: 4px 0 12px 0;
+    font-size: 14px;
+    background: transparent ;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+}
+
+.feedback-submit {
+    font-family: var(--primary-font);
+    padding: 10px  15px;
+    background-color: #ffffff;
+    color: var(--secondar-gray);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
