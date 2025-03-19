@@ -24,26 +24,29 @@ footer {
 
 @media (max-width: 1200px){
     footer {
-        grid-template-rows: 1fr 0.7fr 0.5fr;
+        grid-template-columns: max-content;
+        grid-template-rows: auto;
         align-items: center;
         height: max-content;
+        gap: 50px;
         padding: 1%;
     }   
     .footer-img-wrapper {
         /* outline: auto; */
         width: 220px;
+        /* display: none; */
     }
 }
 
 
 @media (max-width: 1050px) {
     footer {
-        /* flex-direction: column-reverse;
-        justify-content: space-between; */
+        /* flex-direction: column-reverse; */
+        /*justify-content: space-between; */
         grid-template-columns: max-content;
-        grid-template-rows: 1.5fr 0.7fr 1fr;
+        /* grid-template-rows: 1.5fr 0.7fr 1fr; */
         align-items: center;
-        height: max-content;
+        /* height: max-content; */
         padding: 0;
     }
     footer div:nth-child(2) {
