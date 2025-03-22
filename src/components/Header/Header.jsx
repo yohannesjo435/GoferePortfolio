@@ -30,18 +30,22 @@ export default function Header({
   toggleNavigation,
   navigationOpen,
   windowSize,
+  handleheaderHref,
+  headerHref
 }) {
   const [headerIsHidden, setHeaderIsHidden] = useState(false);
   const {scrollY} = useScroll()
   const lastYRef = useRef(0) // this where u stoped on the page(Y axis)
-
+  
 
   useMotionValueEvent(scrollY, "change", (y)=> {
     const differnce = y - lastYRef.current;
 
     if (Math.abs(differnce) > 50) {
         setHeaderIsHidden(differnce > 0 )
+        // document.querySelector("after").style.display = "none"
         //if diffence is larger that 0 we are scrolling down
+          // headerIsHidden && (document.querySelector(".headerIndictor").style.display = "block");
         // if t's smaller than 0 we are scrolling up
         lastYRef.current = y;// we update this if the user scroll more that 50px
       }
@@ -51,10 +55,13 @@ export default function Header({
   const closeNav = navigationOpen && windowSize.width < 900;
   return (
     <motion.header 
+      className="after"
       animate ={headerIsHidden ? "hidden": "visible"}
+      whileHover="visible"
+      whileFocus={() => setHeaderIsHidden(false)}
       variants={{
         hidden: {
-          y: "-90%"
+          y: "-100%"
         },
         visible: {
           y: 0
@@ -82,27 +89,27 @@ export default function Header({
             >
               
               <AnimatedMobileNavLink  href={"#"}>Home</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>About us</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>Service</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>Contact us</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink>About us</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink  href={"#service"}>Service</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink  href={"#footer"}>Contact us</AnimatedMobileNavLink>
   
             </motion.ul>
           )}
         </AnimatePresence>
         ): (
           <ul>
-              <AnimatedMobileNavLink  href={"#"}>Home</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>About us</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>Service</AnimatedMobileNavLink>
-              <AnimatedMobileNavLink  href={"#"}>Contact us</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink active={"active"} href={"#"}>Home</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink active={""} href={"#aboutUs"}>About us</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink active={""} href={"#service"}>Service</AnimatedMobileNavLink>
+              <AnimatedMobileNavLink active={""} href={"#footer"}>Contact us</AnimatedMobileNavLink>
           </ul>
         )
 
       }
 
 
-      <div className="talk-to-an-expert">
-        <Button Children="Talk to an expert" />
+      <div className="talk-to-an-expert" >
+        <Button Children="Talk to an expert" color="var(--secondar-gray)" href="#talkToAnExpert"/>
       </div>
 
       <motion.div
@@ -114,6 +121,10 @@ export default function Header({
         <div></div>
         <div></div>
       </motion.div>
+
+      <div className="headerIndictor">
+
+      </div>
     </motion.header>
   );
 }
@@ -147,10 +158,10 @@ const navLinksVar = {
 // }
 
 
-function AnimatedMobileNavLink({children, href}) {
+function AnimatedMobileNavLink({children, href, active}) {
   return (
     <motion.li /*variants={navLinksContainerVar} initial="initial" animate="open"*/>
-      <motion.a variants={navLinksVar} animate="open" initial="initial"  href={href}>{children}</motion.a>
+      <motion.a className={active} variants={navLinksVar} animate="open" initial="initial"  href={href}>{children}</motion.a>
     </motion.li>
   )
 }

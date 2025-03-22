@@ -14,8 +14,8 @@ footer {
 }
 
 .footer-img-wrapper {
-    /* outline: auto; */
     width: 300px;
+    margin: auto;
 }
 .footer-img-wrapper img {
     /* border: 1px solid black; */

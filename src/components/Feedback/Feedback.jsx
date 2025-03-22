@@ -1,7 +1,7 @@
 import React from 'react'
 export default function Feedback() {
   return (
-    <div className='feedback-wrapper'>
+    <div className='feedback-wrapper' id='talkToAnExpert'>
       <h6>FeedBack</h6>
       <h1>
         Seeking personailezed <br />

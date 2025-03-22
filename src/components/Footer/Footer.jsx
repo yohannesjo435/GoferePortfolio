@@ -7,7 +7,7 @@ import '../FooterLinks/FooterLinks.css'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <Feedback></Feedback>
       <FooterLinks></FooterLinks>
       <FooterLogo></FooterLogo>

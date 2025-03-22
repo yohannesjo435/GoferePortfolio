@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root{
     --primary-backgroud: #000000;
     --secondary-backgroud: #ffff;
@@ -23,6 +26,7 @@
 body {
     background-color: var(--primary-backgroud);
     color: var(--primary-color);
+
 }
 
 

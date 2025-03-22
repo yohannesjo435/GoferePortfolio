@@ -6,7 +6,9 @@
     /* gap: 24px; */
     margin: auto;
     row-gap: 24px;
-    overflow-x: hiiden;
+    /* overflow-x: hidden; */
+    /* outline: auto; */
+    /* height: 100vh; */
 }
 
 .main-content-h1{
@@ -15,13 +17,15 @@
     font-size: 64px;
     margin-top: 64px ;
 }
-.hero-section h5 {
+.hero-section h5 p {
     font-family: var(--primary-font);
     text-align: center;
     color: var(--gray);
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
+    display: inline-block;/* for the animation  */
+    margin-left: 1.5px;
 }
 
 @media (max-width: 900px){

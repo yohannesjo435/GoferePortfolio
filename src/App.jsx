@@ -17,6 +17,7 @@ import Cto2 from "./components/Cto2/Cto2"
 import "./components/Cto2/Cto2.css"
 import Footer from './components/Footer/Footer'
 import './components/Footer/Footer.css'
+import { head } from 'framer-motion/client'
 
 
 export default function App() {
@@ -29,6 +30,12 @@ export default function App() {
     height: window.innerHeight
   })
   
+  const [headerHref, setHeaderHref] = useState("")
+
+  function handleheaderHref(section) {
+    // setHeaderHref(section)
+    console.log("section")
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,6 +59,9 @@ export default function App() {
         toggleNavigation={handleNavigationToggle} 
         navigationOpen={navigationOpen}
         windowSize={windowSize}
+        handleheaderHref={handleheaderHref}
+        headerHref={headerHref}
+
       />
       <main>
         <Hero></Hero>
@@ -64,7 +74,7 @@ export default function App() {
         <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
       </section>
 
-      <section className='cto-section'>
+      <section className='cto-section' id='aboutUs'>
         <Cto></Cto>
       </section>
 
@@ -72,7 +82,7 @@ export default function App() {
         <BentoGrid></BentoGrid>
       </section>
       
-      <section className='service-section'>
+      <section className='service-section' id="service">
         <BentoGridServices></BentoGridServices>
       </section>
 

@@ -1,7 +1,9 @@
+
 header {
     font-family: var(--primary-font);
-    /* background-color: rgba(0, 0, 0, 0.8); */
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: #ffffff; */
+    /* border: 1px solid rgba(245, 245, 245, 0.205); */
     position: sticky;
     top: 0;
     display: flex;
@@ -12,6 +14,30 @@ header {
     height: 64px;
     padding: 0 5%;
     z-index: 1;
+}
+/* header::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--gray);
+    bottom: -10%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+} */
+.headerIndictor {
+    width: 100px;
+    height: 3px;
+    background-color: var(--gray);
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -10%;
+    cursor: pointer;
+
 }
 header .logo-wrapper .logo {
     font-size: var(--header-font-size-1);
@@ -25,6 +51,7 @@ header ul {
     display: flex ;
     position: unset;
     gap: 25px;
+    user-select: none;
 }
 header ul li {
     margin: 2px;
@@ -34,11 +61,15 @@ header ul li {
     
 }
 header ul li a{
+    font-family: var(--primary-font);
     display: inline-block;
     color: var(--gray);
     text-decoration: none;
     transition: 0.35s;
     transition-timing-function: ease-in;
+}
+header ul li .active {
+    color: #ffffff;
 }
 header ul li a:hover{
     color: var(--primary-color);
@@ -67,12 +98,14 @@ header ul li a:hover{
         width: 100%;
         height: 64px;
         position: relative;
-
+    }
+    header::after {
+        display: none;
     }
     
     header ul {
-        /* background-color: #000000b7; */
-        background-color: whitesmoke;
+        background-color: #000000;
+        /* background-color: whitesmoke; */
         display: flex;
         position: absolute;
         top: 101%;

@@ -16,7 +16,6 @@ export default function FooterLinks() {
         <li>+0901010101</li>
         <li>+0902020304</li>
         <li>www.gofere.com</li>
-        <li>Physical Location: Addis Ababa / Gondar</li>
       </ul>
 
       <ul className='social-links'>

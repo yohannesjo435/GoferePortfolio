@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
-    /* outline: auto; */
 }
 .footer-link-wrapper ul {
     display: flex;
@@ -30,4 +29,11 @@
 }
 .footer-link-wrapper .social-links li img{
     width: 100%;
+}
+@media (max-width: 1200px) {
+    .footer-link-wrapper {
+        gap: 32px;
+        width: max-content;
+        margin: auto;
+    }
 }
