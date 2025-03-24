@@ -17,7 +17,6 @@ import Cto2 from "./components/Cto2/Cto2"
 import "./components/Cto2/Cto2.css"
 import Footer from './components/Footer/Footer'
 import './components/Footer/Footer.css'
-import { head } from 'framer-motion/client'
 
 
 export default function App() {

@@ -8,7 +8,7 @@ export default function Hero() {
     description: "a professional website design company."
   }
   const descriptionWord = headline.description.split("")
-  console.log(descriptionWord)
+  // console.log(descriptionWord)
   return (
   <section className='hero-section'>
      <motion.h1 
@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{duration: 0.5, delay: 0.029*index}}
           key={index}
           >
-            {word === " "? "\u00A0": word}
+            {word === " "? "\u00A0": word}{/* for spaces between the words  */}
           </motion.p>
         ))}
      </h5>

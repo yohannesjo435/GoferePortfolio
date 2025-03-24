@@ -99,10 +99,12 @@ header ul li a:hover{
         height: 64px;
         position: relative;
     }
-    header::after {
+    /* header::after {
+        display: none;
+    } */
+    .headerIndictor {
         display: none;
     }
-    
     header ul {
         background-color: #000000;
         /* background-color: whitesmoke; */
