@@ -3,15 +3,19 @@ import Feedback from '../Feedback/Feedback'
 import '../Feedback/Feedback.css'
 import FooterLinks from '../FooterLinks/FooterLinks'
 import '../FooterLinks/FooterLinks.css'
+import pageTransition from '../../Utils/pageTransition'
+import { AnimatePresence } from 'framer-motion'
 
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer id="footer">
-      <Feedback></Feedback>
-      <FooterLinks></FooterLinks>
-      <FooterLogo></FooterLogo>
-    </footer>
+    <AnimatePresence>
+      <footer id="footer">
+        <Feedback></Feedback>
+        <FooterLinks></FooterLinks>
+        <FooterLogo></FooterLogo>
+      </footer>
+    </AnimatePresence>
   )
 }
 
@@ -22,3 +26,4 @@ function FooterLogo() {
     </div>
   )
 }
+export default (Footer);

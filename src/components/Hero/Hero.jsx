@@ -12,7 +12,11 @@ export default function Hero() {
   return (
   <section className='hero-section'>
      <motion.h1 
-      className='main-content-h1'>
+      className='main-content-h1'
+      initial ={{opacity: 0, y: 30}}
+      animate ={{ opacity: 1, y: 0}}
+      transition = {{duration: 1, delay: 0.2}}
+      >
       Website Design and <br /> 
         Development in <br /> 
           Ethiopia

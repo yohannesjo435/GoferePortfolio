@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import Button from "../Button/Button";
 import "../Button/Button.css";
 import { animate, motion, AnimatePresence, delay, useMotionValueEvent, useScroll } from "framer-motion";
+import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const navVars = {
   initial: {
@@ -102,6 +104,8 @@ export default function Header({
               <AnimatedMobileNavLink active={""} href={"#aboutUs"}>About us</AnimatedMobileNavLink>
               <AnimatedMobileNavLink active={""} href={"#service"}>Service</AnimatedMobileNavLink>
               <AnimatedMobileNavLink active={""} href={"#footer"}>Contact us</AnimatedMobileNavLink>
+              {/* <Link to="\footer">Contact Us</Link> */}
+
           </ul>
         )
 
