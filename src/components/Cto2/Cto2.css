@@ -6,6 +6,7 @@
     row-gap: 24px;
     padding: 50px;
     border-radius: 20px;
+
     background: rgba(27,27,27,0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

@@ -20,7 +20,7 @@ import Footer from "./components/Footer/Footer";
 import "./components/Footer/Footer.css";
 import Preloader from "./components/Preloader/Preloader";
 import "./components/Preloader/Preloader.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { animate, AnimatePresence, color, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { slideUp } from "./components/Preloader/preloaderAnimation.js";
 import KanbanBoard from "./components/KanbanBoard/KanbanBoard.jsx";
 import "./components/KanbanBoard/KanbanBoard.css"
@@ -29,6 +29,15 @@ import "./components/KanbanBoard/KanbanBoard.css"
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [navigationOpen, setNavigationOpen] = useState(true);
+  const COLORS = ["#13FFAA", "#1E67C6", "#CEB4CF", "#DD335C"]
+  const color = useMotionValue(COLORS[0])
+  const backgroundImage = useMotionTemplate`
+    radial-gradient(125% 125% at 50% 0%, #020617, 80%, ${color})`
+    // radial-gradient(125% 125% at 50% 0%, #020617, 70%, rgba(221, 51, 92, 0), ${color})
+
+  useEffect(()=> {
+    animate(color, COLORS, {ease: "easeInOut", duration: 10, repeat: Infinity, repeatType: "mirror"})
+  }, [])
   function handleNavigationToggle() {
     setNavigationOpen(!navigationOpen);
   }
@@ -80,11 +89,15 @@ export default function App() {
               headerHref={headerHref}
             />
 
-            <main>
+            <motion.main
+              style={{
+                backgroundImage
+              }}
+              >
               <Hero></Hero>
               {/* <TodoTasks></TodoTasks> */}
               <KanbanBoard/>
-            </main>
+            </motion.main>
             <section className="trusted-by-section">
               <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
               <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>

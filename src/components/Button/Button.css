@@ -7,6 +7,8 @@
     outline: none;
     border-radius: 10px;
     cursor: pointer;
+    border: 1px solid #ffffff;
+
 }
 .btn-component a {
     text-decoration: none;

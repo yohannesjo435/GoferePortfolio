@@ -18,14 +18,16 @@ html {
     --preloader-background: #141516;
     /* #ECECEC  i used this for service, cto2 h3 */
 
-    --primary-font: "Inter", cursive;
-    --secondary-font: "Poppins", cursive;
-    --tenary-fonts: "Montserrat", cursive;
+    --primary-font: "Inter",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Times New Roman', Times, serif, cursive;
+    --secondary-font: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Times New Roman', Times, serif, cursive;
+    --tenary-fonts: "Montserrat",'Times New Roman', Times, serif, cursive;
     /* --ternary-font:  */
 }
 
 body {
     background-color: var(--primary-backgroud);
+    /* background-color: #161616; */
+
     color: var(--primary-color);
 
 }

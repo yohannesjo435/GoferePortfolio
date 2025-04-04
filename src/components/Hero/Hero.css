@@ -7,7 +7,6 @@
     margin: auto;
     row-gap: 24px;
     /* overflow-x: hidden; */
-    /* outline: auto; */
     /* height: 100vh; */
 }
 
@@ -21,7 +20,7 @@
     font-family: var(--primary-font);
     text-align: center;
     color: var(--gray);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     font-weight: 400;
     display: inline-block;/* for the animation  */

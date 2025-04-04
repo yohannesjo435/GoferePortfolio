@@ -14,12 +14,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-color);
-    background-color: var(--primary-backgroud);
+    /* color: var(--primary-color); */
+    color: black;
+    /* background-color: var(--primary-backgroud); */
     /* background-color: rgb(19, 6, 6); */
+    background-color: whitesmoke ;
 }
 .preloader-text {
-    font-size: 2rem;
+    font-size: 43px;
     font-family: var(--tenary-fonts);
     
 }
