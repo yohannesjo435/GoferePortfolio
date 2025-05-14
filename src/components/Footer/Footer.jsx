@@ -5,6 +5,7 @@ import FooterLinks from '../FooterLinks/FooterLinks'
 import '../FooterLinks/FooterLinks.css'
 // import pageTransition from '../../Utils/pageTransition'
 import { AnimatePresence } from 'framer-motion'
+import logo from "../../assets/GofereTypography00-removebg-preview.png"
 
 
 function Footer() {
@@ -22,7 +23,7 @@ function Footer() {
 function FooterLogo() {
   return (
     <div className='footer-img-wrapper'>
-      <img src="src/assets/GofereTypography00-removebg-preview.png" alt="" />
+      <img src={logo} alt="" />
     </div>
   )
 }

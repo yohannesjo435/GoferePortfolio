@@ -1,11 +1,12 @@
 import React from 'react'
 import ServicesCard from "./ServicesCard/ServiceCard"
 import "./ServicesCard/ServiceCard.css"
+import iconImg1 from "../../assets/BentoImages/Image icon/brand-icon-colored.png"
+
 
 export default function BentoGridServices() {
     const iconImages = {
-        icon1: "src/assets/BentoImages/Image icon/coding-icon-colored.png",
-        iconBrand: "src/assets/BentoImages/Image icon/brand-icon-colored.png"
+        // iconBrand: "src/assets/BentoImages/Image icon/brand-icon-colored.png"
     }
     const cardTitles = {
         title1: "Branding"
@@ -32,27 +33,27 @@ export default function BentoGridServices() {
         <ServicesCard 
             cardTitle={cardTitles.title1} 
             cardText={cardTexts.text1}  
-            iconImage={iconImages.iconBrand}>
+            iconImage={iconImg1}>
         </ServicesCard>
         <ServicesCard 
             cardTitle={cardTitles.title1} 
             cardText={cardTexts.text1}  
-            iconImage={iconImages.iconBrand}>
+            iconImage={iconImg1}>
         </ServicesCard>
         <ServicesCard 
             cardTitle={cardTitles.title1} 
             cardText={cardTexts.text1}  
-            iconImage={iconImages.icon1}>
+            iconImage={iconImg1}>
         </ServicesCard>
         <ServicesCard 
             cardTitle={cardTitles.title1} 
             cardText={cardTexts.text1}  
-            iconImage={iconImages.icon1}>
+            iconImage={iconImg1}>
         </ServicesCard>
         <ServicesCard 
             cardTitle={cardTitles.title1} 
             cardText={cardTexts.text1}  
-            iconImage={iconImages.icon1}>
+            iconImage={iconImg1}>
         </ServicesCard>
       </div>
     </div>

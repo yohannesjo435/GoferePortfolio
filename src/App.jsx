@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  animate,
+  AnimatePresence,
+  color,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion";
 import Header from "./components/Header/Header";
 import "./components/Header/Header.css";
 import Hero from "./components/Hero/Hero";
@@ -20,17 +28,11 @@ import Footer from "./components/Footer/Footer";
 import "./components/Footer/Footer.css";
 import Preloader from "./components/Preloader/Preloader";
 import "./components/Preloader/Preloader.css";
-import {
-  animate,
-  AnimatePresence,
-  color,
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-} from "framer-motion";
 import { slideUp } from "./components/Preloader/preloaderAnimation.js";
 import KanbanBoard from "./components/KanbanBoard/KanbanBoard.jsx";
 import "./components/KanbanBoard/KanbanBoard.css";
+
+import TrustedByImg1 from "./assets/warner-bros.svg.png";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -113,10 +115,10 @@ export default function App() {
                 <KanbanBoard />
               </motion.main>
               <section className="trusted-by-section">
-                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
+                <TrustedBy img={TrustedByImg1}></TrustedBy>
+                <TrustedBy img={TrustedByImg1}></TrustedBy>
+                <TrustedBy img={TrustedByImg1}></TrustedBy>
+                <TrustedBy img={TrustedByImg1}></TrustedBy>
               </section>
   
               <section className="cto-section" id="aboutUs">
