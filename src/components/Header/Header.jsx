@@ -33,7 +33,8 @@ export default function Header({
   navigationOpen,
   windowSize,
   handleheaderHref,
-  headerHref
+  headerHref,
+  isLoading
 }) {
   const [headerIsHidden, setHeaderIsHidden] = useState(false);
   const {scrollY} = useScroll()
@@ -80,7 +81,7 @@ export default function Header({
 
       {
         windowSize.width < 900? (
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
           {!closeNav && (
             <motion.ul
               variants={navVars}

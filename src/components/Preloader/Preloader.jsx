@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, time } from 'framer-motion'
 import {slideUp, fade} from  "./preloaderAnimation"
-import pageTransition from '../../Utils/pageTransition';
 
 function Preloader() {
 
@@ -10,23 +9,28 @@ function Preloader() {
 
   useEffect (()=> {
     if (index == words.length - 1) return;
-    setTimeout(()=>{
+    const timer = setTimeout(()=>{
       setIndex(index + 1);
     }, index == 0? 1000: 150)
+
+    return clearInterval(time)
   }, [index])
   return ( 
     <motion.div 
         className='preloader-container' 
-        initail="initail" 
+        variants={slideUp}
+        initial="initial" 
         exit="exit" 
         transition="transition"
-        variants={slideUp}
         >
           <motion.p 
             className='preloader-text' 
             variants={fade} 
+            initial="initial"
             animate="enter"
-            initial="initail">
+            exit="exit"
+            >
+              <span></span>
             {words[index]}
           </motion.p>
     </motion.div>

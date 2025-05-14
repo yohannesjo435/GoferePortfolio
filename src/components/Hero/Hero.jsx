@@ -15,7 +15,7 @@ export default function Hero() {
       className='main-content-h1'
       initial ={{opacity: 0, y: 30}}
       animate ={{ opacity: 1, y: 0}}
-      transition = {{duration: 1, delay: 0.2}}
+      transition = {{duration: 1, delay: 0.4}}//from delay: 0.2
       >
       Website Design and <br /> 
         Development in <br /> 

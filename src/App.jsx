@@ -20,24 +20,35 @@ import Footer from "./components/Footer/Footer";
 import "./components/Footer/Footer.css";
 import Preloader from "./components/Preloader/Preloader";
 import "./components/Preloader/Preloader.css";
-import { animate, AnimatePresence, color, motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import {
+  animate,
+  AnimatePresence,
+  color,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion";
 import { slideUp } from "./components/Preloader/preloaderAnimation.js";
 import KanbanBoard from "./components/KanbanBoard/KanbanBoard.jsx";
-import "./components/KanbanBoard/KanbanBoard.css"
-
+import "./components/KanbanBoard/KanbanBoard.css";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [navigationOpen, setNavigationOpen] = useState(true);
-  const COLORS = ["#13FFAA", "#1E67C6", "#CEB4CF", "#DD335C"]
-  const color = useMotionValue(COLORS[0])
+  const COLORS = ["#13FFAA", "#1E67C6", "#CEB4CF", "#DD335C"];
+  const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`
-    radial-gradient(125% 125% at 50% 0%, #020617, 80%, ${color})`
-    // radial-gradient(125% 125% at 50% 0%, #020617, 70%, rgba(221, 51, 92, 0), ${color})
+    radial-gradient(125% 125% at 50% 0%, #020617, 80%, ${color})`;
+  // radial-gradient(125% 125% at 50% 0%, #020617, 70%, rgba(221, 51, 92, 0), ${color})
 
-  useEffect(()=> {
-    animate(color, COLORS, {ease: "easeInOut", duration: 10, repeat: Infinity, repeatType: "mirror"})
-  }, [])
+  useEffect(() => {
+    animate(color, COLORS, {
+      ease: "easeInOut",
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, []);
   function handleNavigationToggle() {
     setNavigationOpen(!navigationOpen);
   }
@@ -77,54 +88,58 @@ export default function App() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading ? (
-          <Preloader />
-        ) : (
-          <>
-            <Header
-              toggleNavigation={handleNavigationToggle}
-              navigationOpen={navigationOpen}
-              windowSize={windowSize}
-              handleheaderHref={handleheaderHref}
-              headerHref={headerHref}
-            />
 
-            <motion.main
-              style={{
-                backgroundImage
-              }}
+        <AnimatePresence>
+          {isLoading && <Preloader/>}
+        </AnimatePresence>
+          {!isLoading &&
+            <>
+              <Header
+                toggleNavigation={handleNavigationToggle}
+                navigationOpen={navigationOpen}
+                windowSize={windowSize}
+                handleheaderHref={handleheaderHref}
+                headerHref={headerHref}
+                isLoading={isLoading}
+              />
+  
+              <motion.main
+                style={{
+                  backgroundImage,
+                }}
               >
-              <Hero></Hero>
-              {/* <TodoTasks></TodoTasks> */}
-              <KanbanBoard/>
-            </motion.main>
-            <section className="trusted-by-section">
-              <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-              <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-              <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-              <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
-            </section>
+                <Hero></Hero>
+                {/* <TodoTasks></TodoTasks> */}
+                <KanbanBoard />
+              </motion.main>
+              <section className="trusted-by-section">
+                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
+                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
+                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
+                <TrustedBy img={"src/assets/warner-bros.svg.png"}></TrustedBy>
+              </section>
+  
+              <section className="cto-section" id="aboutUs">
+                <Cto></Cto>
+              </section>
+  
+              <section className="bento-section">
+                <BentoGrid></BentoGrid>
+              </section>
+  
+              <section className="service-section" id="service">
+                <BentoGridServices></BentoGridServices>
+              </section>
+  
+              <section className="cto2-section">
+                <Cto2></Cto2>
+              </section>
+              <AnimatePresence mode="wait">
+                <Footer></Footer>
+              </AnimatePresence>
+            </> 
+          }
 
-            <section className="cto-section" id="aboutUs">
-              <Cto></Cto>
-            </section>
-
-            <section className="bento-section">
-              <BentoGrid></BentoGrid>
-            </section>
-
-            <section className="service-section" id="service">
-              <BentoGridServices></BentoGridServices>
-            </section>
-
-            <section className="cto2-section">
-              <Cto2></Cto2>
-            </section>
-            <AnimatePresence mode="wait">
-              <Footer></Footer>
-            </AnimatePresence>
-          </>
-        )}
       </AnimatePresence>
     </>
   );

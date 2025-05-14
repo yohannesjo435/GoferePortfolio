@@ -11,7 +11,7 @@ export default function BentoGrid() {
       </h1>
       
       <div className="bento-grid-wrapper">
-        <BentoCard image="src\assets\BentoImages\tesfayepeanut-landingpage-1.png"/>
+        <BentoCard image="src\assets\BentoImages\tesfayepeanut-landingpage-1.png" link={"https://yohannesjo435.github.io/Addis_hiwot_charity_website/"}/>
         <BentoCard image="src\assets\BentoImages\movieApp.png"/>
         <BentoCard image="src\assets\BentoImages\senk.png"/>
         <BentoCard image="src\assets\BentoImages\RealStateWeb.png"/>

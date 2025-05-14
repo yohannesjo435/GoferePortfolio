@@ -3,7 +3,7 @@ import Feedback from '../Feedback/Feedback'
 import '../Feedback/Feedback.css'
 import FooterLinks from '../FooterLinks/FooterLinks'
 import '../FooterLinks/FooterLinks.css'
-import pageTransition from '../../Utils/pageTransition'
+// import pageTransition from '../../Utils/pageTransition'
 import { AnimatePresence } from 'framer-motion'
 
 
