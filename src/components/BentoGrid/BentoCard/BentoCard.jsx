@@ -29,7 +29,7 @@ export default function BentoCard({image, link}) {
 function BentoButton({href}) {
   return (
     <>
-      <div className='bento-btn'> <a href={href} >Vist Site -> </a></div>
+      <div className='bento-btn'> <a href={href} >Vist Site -  </a></div>
     </>
   )
 }
