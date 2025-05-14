@@ -9,7 +9,7 @@ export default function Feedback() {
         from our team
         </span>
       </h1>
-      <form>
+      <form action={""}>
         <div className="input-wrapper">
           <label htmlFor="name">Name</label>
           <input name="name" type="text" />

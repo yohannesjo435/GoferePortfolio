@@ -1,4 +1,8 @@
 import React from 'react'
+import { FaTelegram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 
 export default function FooterLinks() {
   return (
@@ -19,10 +23,22 @@ export default function FooterLinks() {
       </ul>
 
       <ul className='social-links'>
-        <li><img src="src\assets/BentoImages/Image icon/brand-icon-colored.png" alt="" /></li>
-        <li><img src="src\assets/BentoImages/Image icon/coding-icon-colored.png" alt="" /></li>
-        <li><img src="src\assets/BentoImages/Image icon/brand-icon-colored.png" alt="" /></li>
-        <li><img src="src\assets/BentoImages/Image icon/coding-icon-colored.png" alt="" /></li>
+        <li>
+          <a href="">< FaTelegram />
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <FaFacebook></FaFacebook>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <FaLinkedin />
+          </a>
+        </li>
       </ul>
     </div>
   )

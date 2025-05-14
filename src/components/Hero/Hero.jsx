@@ -34,7 +34,9 @@ export default function Hero() {
         ))}
      </h5>
      <Button 
-      Children="Contact us" 
+      color={"black"}
+      Children="Contact us"
+      href={"#footer"}
     />
   </section>
   )

@@ -11,13 +11,9 @@
 
 }
 .btn-component a {
-    text-decoration: none;
-    /* color: var(--secondar-gray); */
-}
+    text-decoration: none;  }
 .btn-component:hover {
-    background-color: black;
-    border: 1px solid #ffffff;
-}
-.btn-component:hover a {
-    color: #ffffff;
+    transform: scale(1.03);
+    /* background-color: black;
+    border: 1px solid #ffffff; */
 }

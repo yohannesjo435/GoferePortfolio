@@ -11,6 +11,12 @@
 }
 .footer-link-wrapper ul li {
     list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.footer-link-wrapper ul li:hover  {
+    color: var(--gray);
+    font-weight: 600;
 }
 .footer-link-wrapper ul h4 {
     color: var(--feedback-color);
@@ -22,13 +28,16 @@
     flex-direction: row;
     justify-content: space-between;
     width: max-content;
-    gap: 20px;
+    gap: 15px;
 }
+
 .footer-link-wrapper .social-links li{
-    width: 30px;
+    /* width: 30px; */
 }
-.footer-link-wrapper .social-links li img{
-    width: 100%;
+.footer-link-wrapper .social-links li *{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px ;
 }
 @media (max-width: 1200px) {
     .footer-link-wrapper {

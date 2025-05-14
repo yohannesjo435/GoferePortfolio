@@ -18,6 +18,7 @@ export default function Cto() {
         border="2px solid white"
         color={"white"}
         padding={"10px 10px"}
+        href={"#footer"}
         />
       
     </div>

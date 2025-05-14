@@ -1,4 +1,5 @@
 .service-card {
+    box-sizing: border-box;
     font-family: var(--tenary-fonts);
     /* outline: 5px solid #111; */
     padding: 50px; 
@@ -24,12 +25,12 @@
    -webkit-backdrop-filter: blur(10px);
    border: 1px solid rgba(255,255,255,0.05);
    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-
-
+   /* min-height: fit-content; */
+   
 }
 
 .service-card .card-title {
-    font-size: 32px;
+    font-size: 32px;    
     font-weight: 500;
     letter-spacing: 0.16px;
     font-weight: 500;

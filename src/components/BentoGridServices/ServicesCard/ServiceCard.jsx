@@ -15,7 +15,7 @@ export default function ServiceCard({iconImage, cardTitle, cardText}) {
             {cardText}
         </div>      
 
-        <a href="/">Contact us <span>&gt;</span> </a>{/*add ">" in place of the  */}
+        {/* <a href="/">Contact us <span>&gt;</span> </a>add ">" in place of the  */}
           
     </div>
   )

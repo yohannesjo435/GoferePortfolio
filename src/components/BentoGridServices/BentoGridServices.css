@@ -30,7 +30,7 @@
 .service-bento {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 311px 311px;
+    /* grid-template-rows: 311px 311px 311px; don't */
     grid-template-areas: 
     "serviceItem1 serviceItem2"
     "serviceItem3 serviceItem3"
